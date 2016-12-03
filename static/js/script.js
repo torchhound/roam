@@ -4,7 +4,7 @@ function divShow() {
 function divHide(){
 	document.getElementById('popup').style.display = "none";
 }
-function check_empty() {
+function checkEmpty() {
 	if (document.getElementById('distance').value == "") {
 		alert("Please Enter a Distance!");
 	} else {

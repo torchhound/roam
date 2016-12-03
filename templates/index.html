@@ -8,17 +8,17 @@
 	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 	<script src="{{ url_for('static', filename='js/script.js') }}"></script>
   </head>
-  <body><!--
+  <body>
   	<div id="popup">
   		<div id="distanceForm">
 		<form action="#" id="form" method="post" name="form">
 			<img id="close" src="{{ url_for('static', filename='close.png') }}" onclick="divHide()">
-			<input id="distance" name="distance" placeholder="Distance" type="text">
+			<input id="distance" name="distance" placeholder="Distance in Miles" type="text">
 			<input onclick="checkEmpty()" id="submit" value="Submit">
 		</form>
-  	</div>--!>
-    <div id="map"></div><!--
-	<button id="popupButton" onclick="divShow()">Enter Distance</button>--!>
+  	</div>
+    <div id="map"></div>
+	<button id="popupButton" onclick="divShow()">Enter Distance</button>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap">
     </script>
