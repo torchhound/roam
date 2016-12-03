@@ -1,17 +1,3 @@
-function divShow() {
-	document.getElementById('popup').style.display = "block";
-}
-function divHide(){
-	document.getElementById('popup').style.display = "none";
-}
-function checkEmpty() {
-	if (document.getElementById('distance').value == "") {
-		alert("Please Enter a Distance!");
-	} else {
-		document.getElementById('form').submit();
-		alert("Calculating a Random Route!");
-	}
-}
 function initMap() {
 	var map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: -34.397, lng: 150.644},

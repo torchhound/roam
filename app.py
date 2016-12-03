@@ -3,7 +3,8 @@ import random
 import math
 
 app = Flask(__name__)
-app.secret_key = "arbitrage"
+app.config.from_object("app.cfg")
+API_KEY = app.config["GMAPS_API"]
 
 def mileConversion(miles):
 	result = miles * 1.609344
@@ -23,9 +24,12 @@ def randomize(lat, lon, offX, offY):
 @app.route('/', methods=['POST', 'GET'])
 def index():
 	if request.method == "POST":
-		pass
+		distance = request.form["distance"]
+		meters = milesConversion(distance)
+		#final = randomize(lat, lon, split(meters) #call in html with jinja
+		return render_template("index.html", meters=meters, API_KEY=API_KEY)
 	else:
-		return render_template("index.html")
+		return render_template("distance.html")
 	
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0")

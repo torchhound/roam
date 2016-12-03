@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Roam</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/distance.css') }}">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	<script src="{{ url_for('static', filename='js/distance.js') }}"></script>
+  </head>
+  <body>
+		<form action="#" id="form" method="post" name="form">
+			<input id="distance" name="distance" placeholder="Distance in Miles" type="text">
+			<input onclick="checkEmpty()" id="submit" value="Submit">
+		</form>
+  </body>
+</html>
